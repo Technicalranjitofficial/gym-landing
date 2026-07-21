@@ -177,6 +177,29 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
+          {/* xyzbuilder.dev branding */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={inView ? { opacity: 1 } : {}}
+            transition={{ delay: 1 }}
+            className="mt-6 flex justify-center"
+          >
+            <a
+              href="https://xyzbuilder.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 text-white/20 hover:text-white/60 transition-all duration-300"
+            >
+              <span className="text-[10px] uppercase tracking-[0.2em] font-medium">Built by</span>
+              <span className="relative font-black text-xs tracking-wide group-hover:text-white transition-colors">
+                xyzbuilder.dev
+                <motion.span
+                  className="absolute -bottom-px left-0 right-0 h-px bg-white/40 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-300"
+                />
+              </span>
+            </a>
+          </motion.div>
         </div>
       </motion.div>
     </footer>

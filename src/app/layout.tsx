@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Rubik } from "next/font/google";
 import "./globals.css";
 import PageLoader from "@/components/PageLoader";
+import XyzBadge from "@/components/XyzBadge";
 
 const rubik = Rubik({
   variable: "--font-rubik",
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className={`${rubik.variable} antialiased`}>
       <body className="min-h-full flex flex-col">
         <PageLoader />
+        <XyzBadge />
         {children}
       </body>
     </html>
